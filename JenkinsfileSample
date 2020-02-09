@@ -1,0 +1,30 @@
+pipeline{
+    agent any
+	stages{
+	   stage("Welcome"){
+	      steps{
+		      echo "Welcome to Declarative pipeline."
+	      }
+	   }
+	   stage("Git Checkout"){
+	      steps{
+		      echo "Git CHeckout."
+	      }
+	   }
+	   stage("Build"){
+	      steps{
+		      echo "Build."
+	      }
+	   }
+	   stage("Packaging"){
+	      steps{
+		      echo "Packaging."
+	      }
+	   }
+	   stage("Upload to nexus"){
+	      steps{
+		      echo "Upload to nexus."
+	      }
+	   }
+    }
+}
